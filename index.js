@@ -41,6 +41,6 @@ app.get('/API/:cidade', async(req, res) => {
 
 })
   
-app.listen(port, process.env.PORT, () => {
+app.listen(port || process.env.PORT, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
