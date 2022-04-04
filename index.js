@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 5000
 var dados
 
 // Função Puppeteer
@@ -41,6 +41,6 @@ app.get('/API/:cidade', async(req, res) => {
 
 })
   
-app.listen(port, () => {
+app.listen(port, process.env.PORT, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
